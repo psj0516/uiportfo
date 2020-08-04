@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review</title>
+<link href="../css/bootstrap.css" rel="stylesheet">
+<link href="../css/bootstrap-theme.css" rel="stylesheet">
+<link href="../css/custom2.css" rel="stylesheet">
+<link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/board.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+	<div id="wrapper">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+			</div>
+			<div id="menu" class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="../index.html" accesskey="1" title="">HOME</a></li>
+					<li><a href="../about/about.html" accesskey="2" title="">About</a></li>
+					<li><a href="../review/review.html" accesskey="3" title="">Review</a></li>
+				</ul>
+				<div class="navbar-right">
+					<ul class="nav navbar-nav">
+						<li><a href="../members/login.html">login</a></li>
+						<li><a href="../members/join.html">Join</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- 리뷰 게시판 -->
+		<div id="page" class="container">
+			<form action="#" method="post" enctype="multipart/form-data">
+				<div class="col-md-8 post">
+					<h2>Review</h2>
+					<table>
+						<tr>
+							<td><input type="text" name="name" placeholder="작성자 *" required></td>
+							<td><input type="password" name="passwd" placeholder="비밀번호 *" required></td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="text" name="subject" placeholder="제목을 입력하세요." required></td>
+						</tr>
+						<tr>
+							<td colspan="2" class="files"><input type="file" class="file" name="filename"> <input type="file" class="file" name="filename"> <input type="file" class="file" name="filename"></td>
+						</tr>
+						<tr>
+							<td colspan="2"><textarea name="content"></textarea></td>
+						</tr>
+						<tr>
+							<td colspan="2" class="buttons">
+								<button type="button" class="button-custom" onclick="location.href='review.html'">글목록</button>
+								<button type="reset" class="button-custom">다시쓰기</button>
+								<button type="button" class="button-custom pull-right" onclick="location.href='review.html'">글쓰기</button>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</form>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div id="wrapper">
+		<div id="portfolio-wrapper">
+			<div id="portfolio" class="container">
+				<div class="col-md-3">
+					<div class="box">
+						<h3>SCHMIDT</h3>
+						<p>
+							54 Medich St. KC. Sardinia.<br> (tel) 567-1234-7890
+						</p>
+					</div>
+				</div>
+				<div class="col-md-9">
+					<div class="box">
+						<h3>Contact Us</h3>
+						<form action="#">
+							<div class="col-md-3">
+								<input type="text" placeholder="name" class="input">
+								<br>
+								<input type="email" placeholder="e-mail" class="input">
+								<br>
+							</div>
+							<div class="col-md-9">
+								<textarea placeholder="Message" class="textarea"></textarea>
+								<button type="submit" class="button-custom pull-right">Send</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<p>
+			&copy; 2020. All rights reserved. Photos by <a href="https://pixabay.com/">Pixabay</a>.
+		</p>
+	</div>
+	<script src="../js/jquery-3.5.1.js"></script>
+	<script src="../js/bootstrap.js"></script>
+</body>
+</html>

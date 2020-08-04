@@ -1,0 +1,68 @@
+td {
+	padding-bottom: 10px;
+}
+
+h3 {
+	color: #3a89ff;
+	font-weight: 800;
+}
+
+.input {
+	width: 300px;
+	height: 30px;
+	margin-left: 20px;
+	border: solid 1px rgb(226, 226, 226);
+}
+
+.input:focus {
+	outline: solid 1px #3a89ff;
+}
+
+.short-cell {
+	width: 80px;
+}
+
+.buttons {
+	text-align: right;
+}
+
+.checkbutton {
+	margin-left: 0;
+	line-height: 2.3em;
+}
+
+#passwdMessage {
+	color: red;
+}
+
+.cat, .con {
+	padding: 0px;
+}
+
+.mypage table {
+	padding: 0px;
+}
+
+.mypage h3 {
+	margin-bottom: 10px;
+}
+
+.mypage th {
+	background: #3a89ff;
+	color: white;
+}
+
+.mypage td {
+	background: rgb(236, 236, 236);
+	padding-bottom: 0px;
+}
+
+.mypage th, .mypage td {
+	border-right: 2px solid white;
+	line-height: 2em;
+	text-align: center;
+}
+
+.mypage .con-table td {
+	border-bottom: 2px solid white;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Admin | Charts</title>
+<link href="../css/bootstrap.css" rel="stylesheet">
+<link href="../css/bootstrap-theme.css" rel="stylesheet">
+<link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/board.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/custom2.css" rel="stylesheet">
+<style>
+p {
+	cursor: pointer;
+}
+
+img {
+	margin-bottom: 0px !important;
+}
+
+i {
+	color: #3a89ff
+}
+
+.pages {
+	width: 500px !important;
+	margin: auto;
+}
+
+div .pie_chart {
+	width: 550px;
+	height: 400px;
+}
+</style>
+</head>
+<body>
+	<div id="wrapper">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+			</div>
+			<div id="menu" class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="../index.html" accesskey="1" title="">HOME</a></li>
+					<li><a href="../about/about.html" accesskey="2" title="">About</a></li>
+					<li><a href="../review/review.html" accesskey="3" title="">Review</a></li>
+				</ul>
+				<div class="navbar-right">
+					<ul class="nav navbar-nav">
+						<li><a href="../admin/adminMembers.html" style="padding-right: 0px">관리자</a></li>
+						<li><a href="../members/join.html">로그아웃</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div id="page">
+			<div class="col-md-10">
+				<h2 style="padding-left: 15px">Admin Page</h2>
+				<div class="col-md-2 col-lg-2">
+					<div class="sub_menu">
+						<ul>
+							<li>
+								<p onclick="location.href='adminMembers.html'">회원 관리</p>
+							</li>
+							<li>
+								<p onclick="location.href='adminCharts.html'">통계</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-10 col-lg-10">
+					<h3 class="sub_title">통계</h3>
+					<div id="pie_chart_1" class="pie_chart"></div>
+					<div id="pie_chart_2" class="pie_chart"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://www.gstatic.com/charts/loader.js"></script>
+	<script>
+		google.charts.load('current', {
+			packages : [ 'corechart' ]
+		});
+
+		google.charts.setOnLoadCallback(function() {
+			pieChart1();
+			pieChart2();
+		});
+
+		// 차트 1
+		function pieChart1() {
+			var arr = [ [ '기간', '게시글수' ], [ '2019년 12월', 120 ],
+					[ '2020년 1월', 140 ], [ '2020년 2월', 235 ],
+					[ '2020년 3월', 320 ], [ '2020년 4월', 115 ] ];
+			var dataTable = google.visualization.arrayToDataTable(arr);
+			var options = {
+				title : '기간별 게시글 작성수'
+			};
+
+			var objDiv = document.getElementById('pie_chart_1');
+			var chart = new google.visualization.PieChart(objDiv);
+			chart.draw(dataTable, options);
+		}
+
+		// 차트2
+		function pieChart2() {
+			var arr = [ [ '연령대', '인원수' ], [ '10대', 20 ], [ '20대', 40 ],
+					[ '30대', 35 ], [ '40대', 20 ], [ '50대 이상', 15 ] ];
+			var dataTable = google.visualization.arrayToDataTable(arr);
+			var options = {
+				title : '회원 연령대 분포'
+			};
+
+			var objDiv = document.getElementById('pie_chart_2');
+			var chart = new google.visualization.PieChart(objDiv);
+			chart.draw(dataTable, options);
+		}
+	</script>
+	<script src="../js/jquery-3.5.1.js"></script>
+	<script src="../js/bootstrap.js"></script>
+</body>
+</html>
